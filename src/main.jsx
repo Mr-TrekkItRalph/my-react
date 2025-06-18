@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import IndexPage from './pages/index.jsx'
 import CreateStudentPage from './pages/create-pages-student.jsx'
 import StepOne from './pages/step-one.jsx'
+import StepTwo from './pages/step-two.jsx'
+import StepThree from './pages/step-three.jsx'
+import StepFour from './pages/step-four.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,8 +28,16 @@ const router = createBrowserRouter([
             element: <StepOne />
           },
           {
-            path: 'steptwo',
-            element: <h1>Testing of StepTwo</h1>
+            path: 'step-two',
+            element: <StepTwo />
+          },
+          {
+            path: 'step-three',
+            element: <StepThree />
+          },
+          {
+            path: 'step-four',
+            element: <StepFour />
           }
         ]
       },

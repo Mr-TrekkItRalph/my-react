@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import StudentCard from "./components/student-card";
 import { getStudents } from "./api";
-import { Outlet } from "react-router-dom";
 
 function App() {
   const [students, setStudents] = useState([]);
