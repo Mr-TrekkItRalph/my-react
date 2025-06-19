@@ -9,6 +9,7 @@ import StepOne from './pages/step-one.jsx'
 import StepTwo from './pages/step-two.jsx'
 import StepThree from './pages/step-three.jsx'
 import StepFour from './pages/step-four.jsx'
+import EnrollmentPage from './pages/create-pages-student.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'create-student',
-        element: <CreateStudentPage />,
+        element: <EnrollmentPage />,
         children:[
           {
             path: '',
