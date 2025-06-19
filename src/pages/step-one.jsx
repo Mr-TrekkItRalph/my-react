@@ -37,14 +37,14 @@ export default function StepOne() {
     usePersistentForm({ refs: persistentFields });
     
     return (
-            <div className="flex flex-col w-screen h-screen gap-5"> 
+            <main className="flex">
+                <div className="w-100 h-auto"></div>
+            <form className="flex flex-1 flex-col items-center gap-5 border-1 border-white rounded-xl p-5"> 
                 <section className="flex justify-center gap-5">
-                    <div className="relative">
                         <div className="flex flex-col gap-1">
                             <p className="text-white">First Name:</p>
-                            <input ref={firstNameRef} type="text" className="relative text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
+                            <input ref={firstNameRef} type="text" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
                         </div>
-                    </div>
                     <div className="flex flex-col gap-1">
                         <p className="text-white">Last Name:</p>
                         <input ref={lastNameRef} type="text" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
@@ -105,13 +105,14 @@ export default function StepOne() {
                     </div>
                 </section>
                 
-                <section className="flex justify-start ml-[125px] gap-5">
+                <section className="flex self-start mr-auto gap-5">
                     <div className="flex flex-col gap-1">
                         <p className="text-white">LRN Number:</p>
                         <input ref={lrnNumberRef} type="text" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>                
                     </div>
                 </section>
-
-            </div>
+            </form>
+            <div className="w-100 h-auto"></div>
+            </main>
     );
 }

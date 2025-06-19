@@ -18,13 +18,26 @@ export default function StepTwo() {
         usePersistentForm({ refs: persistentFields });
     
     return (
-        <main className="flex flex-col justify-center gap-2">
-            <div className="flex flex-col items-center gap-3">
-                <input ref={guardiansNameRef} type="text" placeholder="Guardian's Name" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={relationshipToStudRef} type="text" placeholder="Relationship To Student" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={guardiansContactNumRef} type="text" placeholder="Guardian's Contact Number" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={guardianHomeAddressRef} type="text" placeholder="Home Address" className="w-[713px] border-5 rounded-lg"/>
-            </div>
-        </main>
+        // <main className="flex flex-col justify-center gap-2">
+        //     <div className="flex flex-col items-center gap-3">
+        //         <input ref={guardiansNameRef} type="text" placeholder="Guardian's Name" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
+        //         <input ref={relationshipToStudRef} type="text" placeholder="Relationship To Student" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
+        //         <input ref={guardiansContactNumRef} type="text" placeholder="Guardian's Contact Number" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
+        //         <input ref={guardianHomeAddressRef} type="text" placeholder="Home Address" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
+        //     </div>
+        // </main>
+
+        <div className="flex justify-center">
+            <form className="flex items-center flex-col gap-5 border-1 border-white rounded-xl w-250 h-auto p-5">
+                <p className="text-white items self-start">Guardian's Name</p>
+                <input ref={guardiansNameRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">Relationship To Student</p>
+                <input ref={relationshipToStudRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">Guardian's Contact Number</p>
+                <input ref={guardiansContactNumRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">Home Address</p>
+                <input ref={guardianHomeAddressRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+            </form>
+        </div>
     );
 }

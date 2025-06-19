@@ -21,10 +21,16 @@ export default function StepThree() {
     return(
         <main className="flex flex-col justify-center gap-2">
             <div className="flex flex-col items-center gap-3">
-                <input ref={seniorHSAttendedRef} type="text" placeholder="Senior High School Attended" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={yearGraduatedRef} type="text" placeholder="Year Graduated" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={generalAverageRef} type="text" placeholder="General Average" className="w-[713px] border-5 rounded-lg"/>
-                <input ref={schoolAddressRef} type="text" placeholder="School Address" className="w-[713px] border-5 rounded-lg"/>
+                <form className="flex flex-col border-white border-1 gap-5 items-center p-5 rounded-xl">
+                <p className="text-white self-start">Senior High School Attended:</p>
+                <input ref={seniorHSAttendedRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">Year Graduated:</p>
+                <input ref={yearGraduatedRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">General Average:</p>
+                <input ref={generalAverageRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <p className="text-white self-start">School Address:</p>
+                <input ref={schoolAddressRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                </form>
             </div>
         </main>
     );
