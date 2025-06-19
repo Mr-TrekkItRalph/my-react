@@ -70,7 +70,7 @@ export default function StepOne() {
                         <input ref={civilStatusRef} type="text" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <p className="text-white">Date:</p>
+                        <p className="text-white">Birth Date:</p>
                         <input ref={dateRef} type="date" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-1">

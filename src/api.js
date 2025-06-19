@@ -47,3 +47,11 @@ export const modeOfLearningAPI = async() => {
   console.log(res)
   return res;
 };
+
+export const courseTypesAPI = async() => {
+  const response = await fetch(`${BASE_URL}/api/courseTypes/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};
