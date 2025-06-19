@@ -1,6 +1,7 @@
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import { usePersistentForm } from "../hooks/usePersistentForm";
 import { useNavigate } from "react-router-dom";
+import { enrollmentStatus, modeOfLearningAPI, programToEnroll, typesOfApplicant } from "../api";
 
 export default function StepFour() {
     
@@ -18,6 +19,39 @@ export default function StepFour() {
         enrollmentStatusRef,
         modeOfLearningRef,
     };
+
+    const [courses, setCourses] = useState([])
+        console.log(courses);
+        useEffect(() => {
+            programToEnroll().then((response) =>{
+                setCourses(response);
+            });
+        },[]);
+
+
+    const [typeOfApplicant, setTypeOfApplicant] = useState([])
+        console.log(typeOfApplicant);
+        useEffect(() => {
+            typesOfApplicant().then((response) =>{
+                setTypeOfApplicant(response);
+            });
+        },[]);
+
+        const [enrollmentStatuss, setenrollmentStatuss] = useState([])
+        console.log(enrollmentStatuss);
+        useEffect(() => {
+            enrollmentStatus().then((response) =>{
+                setenrollmentStatuss(response);
+            });
+        },[]);
+
+        const [modeOfLearning, setModeOfLearning] = useState([])
+        console.log(modeOfLearning);
+        useEffect(() => {
+            modeOfLearningAPI().then((response) =>{
+                setModeOfLearning(response);
+            });
+        },[]);
         
     usePersistentForm({ refs: persistentFields });
     
@@ -40,27 +74,30 @@ export default function StepFour() {
                 <p className="text-white">Academic Year/Semester:</p>
                 <input ref={academicYearSemesterRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
                 <p className="text-white">Program to Enroll(e.g., BS in Nursing, MBA, MA in Education:</p>
-                <input ref={programToEnrollRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <select ref={programToEnrollRef} className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl">
+                    {courses?.map((courses) => {
+                                    return (<option key={courses.id} value={courses.id}>{courses.name}</option>)
+                                })}
+                </select>
                 </form>
                 <form className="flex flex-col gap-3"> 
                 <p className="text-white mt-5">Type of Applicant:</p>
                 <select ref={typeofApplicantRef} className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl">
-                    <option value="1">New Freshman</option>
-                    <option value="2">Transferee</option>
-                    <option value="3">Returning Student</option>
-                    <option value="4">Second Student</option>
-                    <option value="5">Graduate Student (Master's/Doctorate)</option>
+                    {typeOfApplicant?.map((typeOfApplicant) => {
+                                    return (<option key={typeOfApplicant.id} value={typeOfApplicant.id}>{typeOfApplicant.name}</option>)
+                                })}
                 </select>
                 <p className="text-white">Enrollment Status</p>
                 <select ref={enrollmentStatusRef} className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl">
-                    <option value="1">Full Time</option>
-                    <option value="2">Part Time</option>
+                    {enrollmentStatuss?.map((enrollmentStatuss) => {
+                                    return (<option key={enrollmentStatuss.id} value={enrollmentStatuss.id}>{enrollmentStatuss.name}</option>)
+                                })}
                 </select>
                 <p className="text-white">Mode of Learning (if applicable)</p>
                 <select ref={modeOfLearningRef} className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl">
-                    <option value="1">Face to Face</option>
-                    <option value="2">Online</option>
-                    <option value="3">Blended</option>
+                    {modeOfLearning?.map((modeOfLearning) => {
+                                    return (<option key={modeOfLearning.id} value={modeOfLearning.id}>{modeOfLearning.name}</option>)
+                                })}
                 </select>
                 <button onClick={handlesubmit} className="bg-white rounded-xl h-10">Submit</button>
                 </form>

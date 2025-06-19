@@ -7,3 +7,43 @@ export const getStudents = async () => {
   console.log(res);
   return res;
 };
+
+export const getGenders = async() => {
+  const response = await fetch(`${BASE_URL}/api/gender/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};
+
+export const programToEnroll = async() => {
+  const response = await fetch(`${BASE_URL}/api/courses/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};
+
+export const typesOfApplicant = async() => {
+  const response = await fetch(`${BASE_URL}/api/enrollmentTypes/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};
+
+export const enrollmentStatus = async() => {
+  const response = await fetch(`${BASE_URL}/api/enrollment-status/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};
+
+export const modeOfLearningAPI = async() => {
+  const response = await fetch(`${BASE_URL}/api/modeoflearning/`)
+  
+  const res = await response.json();
+  console.log(res)
+  return res;
+};

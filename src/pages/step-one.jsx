@@ -1,5 +1,6 @@
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import { usePersistentForm } from "../hooks/usePersistentForm";
+import { getGenders } from "../api";
 
 
 export default function StepOne() {
@@ -33,6 +34,14 @@ export default function StepOne() {
         placeOfBirthRef,
         lrnNumberRef,
     };
+
+    const [gender, setGender] = useState([])
+    console.log(gender);
+    useEffect(() => {
+        getGenders().then((response) =>{
+            setGender(response);
+        });
+    },[]);
 
     usePersistentForm({ refs: persistentFields });
     
@@ -68,8 +77,12 @@ export default function StepOne() {
                         <p className="text-white">Gender:</p>
                         <form>
                             <select ref={genderRef} name="" id="" className="text-center text-white border-1 border-white w-[330px] h-[50px] rounded-xl">
-		                        <option value="1">Male</option>
-		                        <option value="2">Female</option>
+		                        {gender?.map((gender) => {
+                                    return (<option key={gender.id} value={gender.id}>{gender.name}</option>)
+                                })}
+                                    
+                                
+
 	                        </select>
                         </form>
                     </div>

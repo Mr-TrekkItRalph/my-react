@@ -12,7 +12,7 @@ export default function StudentCard({ data: student }) {
           <p className="text-xs">Institute of technology Inc.</p>
         </div>
       </div>
-      <section className="flex items-center flex-1 px-5 gap-3">
+      <section className="flex items-center flex-1 px-5 gap-3 bg-white">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqP58jH6BklGhqSjacoISaIMdU7T26mvR7w&s"
           alt=""
