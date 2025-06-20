@@ -23,17 +23,17 @@ export default function StepThree() {
     return(
         <main className="flex flex-col justify-center gap-2">
             <div className="flex flex-col items-center gap-3">
-                <form className="flex flex-col border-white border-1 gap-5 items-center p-5 rounded-xl">
+                <form className="flex flex-col bg-gray-800 gap-5 items-center p-5 rounded-xl">
                 <p className="text-white self-start">Senior High School Attended:</p>
-                <input ref={seniorHSAttendedRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <input ref={seniorHSAttendedRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
                 <p className="text-white self-start">Strand SHS:</p>
-                <input ref={strandSHSRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <input ref={strandSHSRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
                 <p className="text-white self-start">Year Graduated:</p>
-                <input ref={yearGraduatedRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <input ref={yearGraduatedRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
                 <p className="text-white self-start">General Average:</p>
-                <input ref={generalAverageRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <input ref={generalAverageRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
                 <p className="text-white self-start">School Address:</p>
-                <input ref={schoolAddressRef} type="text" className="text-center text-white border-1 border-white w-[900px] h-[80px] rounded-xl"/>
+                <input ref={schoolAddressRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
                 </form>
             </div>
         </main>
