@@ -132,15 +132,15 @@ export default function StepFour() {
             <form className="bg-gray-800 rounded-xl p-5">
                 <form className="flex flex-col gap-5">
                 <p className="text-white">Academic Year/Semester:</p>
-                <input ref={academicYearSemesterRef} type="text" className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl"/>
+                <input ref={academicYearSemesterRef} type="text" className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]"/>
                 <p className="text-white">Courses:</p>
-                <select ref={programToEnrollRef} className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl">
+                <select ref={programToEnrollRef} className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]">
                     {courses?.map((courses) => {
                                     return (<option key={courses.id} value={courses.id}>{courses.name}</option>)
                                 })}
                 </select>
                 <p className="text-white">Course Types:</p>
-                <select ref={courseTypesRef} className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl">
+                <select ref={courseTypesRef} className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]">
                     {courseTypes?.map((courseTypes) => {
                                     return (<option key={courseTypes.id} value={courseTypes.id}>{courseTypes.name}</option>)
                                 })}
@@ -148,19 +148,19 @@ export default function StepFour() {
                 </form>
                 <form className="flex flex-col gap-3"> 
                 <p className="text-white mt-5">Type of Applicant:</p>
-                <select ref={typeofApplicantRef} className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl">
+                <select ref={typeofApplicantRef} className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]">
                     {typeOfApplicant?.map((typeOfApplicant) => {
                                     return (<option key={typeOfApplicant.id} value={typeOfApplicant.id}>{typeOfApplicant.name}</option>)
                                 })}
                 </select>
                 <p className="text-white">Enrollment Status:</p>
-                <select ref={enrollmentStatusRef} className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl">
+                <select ref={enrollmentStatusRef} className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]">
                     {enrollmentStatuss?.map((enrollmentStatuss) => {
                                     return (<option key={enrollmentStatuss.id} value={enrollmentStatuss.id}>{enrollmentStatuss.name}</option>)
                                 })}
                 </select>
                 <p className="text-white">Mode of Learning (if applicable):</p>
-                <select ref={modeOfLearningRef} className="indent-2 text-white bg-black w-[600px] h-[40px] rounded-xl">
+                <select ref={modeOfLearningRef} className="indent-2 text-white border-b-1 border-white w-[600px] h-[40px]">
                     {modeOfLearning?.map((modeOfLearning) => {
                                     return (<option key={modeOfLearning.id} value={modeOfLearning.id}>{modeOfLearning.name}</option>)
                                 })}

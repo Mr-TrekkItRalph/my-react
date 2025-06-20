@@ -30,13 +30,13 @@ export default function StepTwo() {
         <div className="flex justify-center">
             <form className="flex items-center flex-col gap-5 bg-gray-800 rounded-xl w-auto h-auto p-5">
                 <p className="text-white items self-start">Guardian's Name:</p>
-                <input ref={guardiansNameRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
+                <input ref={guardiansNameRef} type="text" className="indent-2 text-white border-b-1 border-white w-[500px] h-[40px]"/>
                 <p className="text-white self-start">Relationship To Student:</p>
-                <input ref={relationshipToStudRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
+                <input ref={relationshipToStudRef} type="text" className="indent-2 text-white border-b-1 border-white w-[500px] h-[40px]"/>
                 <p className="text-white self-start">Guardian's Contact Number:</p>
-                <input ref={guardiansContactNumRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
+                <input ref={guardiansContactNumRef} type="text" className="indent-2 text-white border-b-1 border-white w-[500px] h-[40px]"/>
                 <p className="text-white self-start">Home Address:</p>
-                <input ref={guardianHomeAddressRef} type="text" className="indent-2 text-white bg-black w-[500px] h-[40px] rounded-xl"/>
+                <input ref={guardianHomeAddressRef} type="text" className="indent-2 text-white border-b-1 border-white w-[500px] h-[40px]"/>
             </form>
         </div>
     );
